@@ -1,3 +1,5 @@
+echo "started dep script"
+
 # sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E '%{rhel}').noarch.rpm
 # sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 # sudo yum update

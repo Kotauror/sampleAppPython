@@ -1,1 +1,2 @@
+echo "started stop script"
 sudo pkill -9 -f ../app.py
