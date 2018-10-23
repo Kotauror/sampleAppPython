@@ -1,2 +1,3 @@
 echo "started start script"
+cd var/www/html/
 flask run
