@@ -1,0 +1,6 @@
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E '%{rhel}').noarch.rpm
+sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum update
+sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+sudo yum -y install python-pip
+sudo pip install flask
