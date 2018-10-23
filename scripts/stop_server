@@ -1,5 +1,5 @@
 # echo "started stop script"
-if [ `ps -e | grep python | wc -l` -gt 1 ]
+if [ `ps -e | grep python | wc -l` -ge 1 ]
 then
 pkill python
 fi
