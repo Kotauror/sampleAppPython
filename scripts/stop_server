@@ -1,5 +1,6 @@
-echo "started stop script"
+# echo "started stop script"
 # if [ `ps -e | grep python | wc -l` -gt 1 ]
 # then
-#     pkill python
+pkill python
 # if
+# sudo pkill -9 -f ../app.py
