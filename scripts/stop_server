@@ -1,1 +1,1 @@
-sudo pkill -f python
+sudo pkill -9 -f ../app.py
