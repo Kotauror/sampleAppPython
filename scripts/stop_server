@@ -1,6 +1,7 @@
 # echo "started stop script"
-if [ `ps -e | grep [p]python | wc -l` -ge 1 ]
-then
-  sudo kill $(ps -ef | grep [p]ython | awk '{print $2}')
-fi
-# d# sudo pkill -9 -f ../app.py
+# if [ `ps -e | grep python | wc -l` -ge 1 ]
+# then
+# pkill python
+# fi
+sudo kill $(ps -ef | grep [p]ython | awk '{print $2}')
+# sudo pkill -9 -f ../app.py
