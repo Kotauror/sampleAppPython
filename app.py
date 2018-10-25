@@ -1,7 +1,7 @@
 from flask import Flask
-import boto3
+# import boto3
 app = Flask(__name__)
-rds = boto3.client('rds')
+# rds = boto3.client('rds', region_name='us-west-1')
 
 
 @app.route('/')
