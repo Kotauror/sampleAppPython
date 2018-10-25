@@ -6,8 +6,7 @@ rds = boto3.client('rds', region_name='us-west-1')
 def getNumberOfDBs():
     try:
         dbs = rds.describe_db_instances()
-        return dbs[0]['MasterUsername']
-        # return len(dbs)
+        return len(dbs)
     except Exception as e:
         return e
 
@@ -15,4 +14,4 @@ def getNumberOfDBs():
 def hello_world():
     numOfDB = getNumberOfDBs()
     print(numOfDB)
-    return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, how cool is that. Test"
+    return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, I thing it should have one....."
