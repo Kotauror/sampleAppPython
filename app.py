@@ -6,7 +6,8 @@ rds = boto3.client('rds', region_name='us-west-1')
 def getNumberOfDBs():
     try:
         dbs = rds.describe_db_instances()
-        return len(dbs)
+        return dbs[0]['MasterUsername']
+        # return len(dbs)
     except Exception as e:
         return e
 
