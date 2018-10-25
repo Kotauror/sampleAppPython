@@ -6,8 +6,10 @@ rds = boto3.client('rds')
 
 @app.route('/')
 def hello_world():
-    # try:
-    #     dbs = rds.describe_db_instances()
+    try:
+        dbs = rds.describe_db_instances()
+        length = len(dbs)
+        return length
     #     for db in dbs['DSInstances']:
     #         return((%s@%s:s %s) % (db['MasterUsername'], db['Endpoint']['Address'], db['Endpoint']['Port'], db['DBInstanceStatus']))
     # except Exceptions as e:
