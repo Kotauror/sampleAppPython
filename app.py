@@ -14,4 +14,4 @@ def getNumberOfDBs():
 def hello_world():
     numOfDB = getNumberOfDBs()
     print(numOfDB)
-    return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, I thing it should have one....."
+    return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, I think it should have one....."
