@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 # app = Flask(__name__)
 # rds = boto3.client('rds', region_name='us-west-1')
 
-// config
+# config
 # SQLALCHEMY_DATABASE_URI = os.environ.get(
 #         'DATABASE_URI', 'postgresql://localhost/contacts')
 
