@@ -1,7 +1,10 @@
 from flask import Flask
 import boto3
 import os
+from models import db
 from flask_sqlalchemy import SQLAlchemy
+from models import Contact
+
 
 # app = Flask(__name__)
 # rds = boto3.client('rds', region_name='us-west-1')
@@ -9,6 +12,7 @@ from flask_sqlalchemy import SQLAlchemy
 # config
 # SQLALCHEMY_DATABASE_URI = os.environ.get(
 #         'DATABASE_URI', 'postgresql://localhost/contacts')
+app = Flask(__name__)
 
 POSTGRES = {
     'user': 'helloNamesAdmin',
@@ -17,13 +21,13 @@ POSTGRES = {
     'host': 'hellonames.c9xzd6caea05.us-east-1.rds.amazonaws.com',
     'port': '5432',
 }
-app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
 %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
+db.init_app(app)
 
 # app.config.from_object(SQLALCHEMY_DATABASE_URI)
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
 
 # def getNumberOfDBs():
