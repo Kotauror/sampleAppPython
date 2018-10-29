@@ -37,5 +37,5 @@ db = SQLAlchemy(app)
 def hello_world():
     # numOfDB = getNumberOfDBs()
     # print(numOfDB)
-    return "Im using sqlalchemy 2"
+    return "Im using sqlalchemy 2" + db + "."
     # return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, I think it should have one....."
