@@ -17,12 +17,11 @@ POSTGRES = {
     'host': 'hellonames.c9xzd6caea05.us-east-1.rds.amazonaws.com',
     'port': '5432',
 }
+app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
 %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
 
-
-app = Flask(__name__)
 # app.config.from_object(SQLALCHEMY_DATABASE_URI)
 db = SQLAlchemy(app)
 
@@ -38,5 +37,5 @@ db = SQLAlchemy(app)
 def hello_world():
     # numOfDB = getNumberOfDBs()
     # print(numOfDB)
-    return "Im using sqlalchemy"
+    return "Im using sqlalchemy 2"
     # return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, I think it should have one....."
