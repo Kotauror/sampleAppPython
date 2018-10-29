@@ -1,10 +1,9 @@
 from flask import Flask
-import boto3
+import time
 import os
 from models import db
 from flask_sqlalchemy import SQLAlchemy
 from models import Contact
-
 
 # app = Flask(__name__)
 # rds = boto3.client('rds', region_name='us-west-1')
@@ -42,9 +41,16 @@ db.init_app(app)
 def hello_world():
     # numOfDB = getNumberOfDBs()
     # print(numOfDB)
-    contats = Contact.query.all()
+    print("*")
+    print(Contact)
+    time.sleep(3)
+    contacts = Contact.query.all()
+    time.sleep(3)
+    print("**")
+    print(contacts)
+    print("***")
     # numOfContacts = len(contacts)
-    return "miaauauuu"
+    return "miaauauuu we have " + str(len(contacts)) + "in the db"
     # return str(numOfContacts)
     # return "I have " + str(numOfContacts) + "contacts"
     # return "Im using sqlalchemy 2" + "and having probs."
