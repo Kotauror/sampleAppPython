@@ -23,4 +23,4 @@ db.init_app(app)
 @app.route('/')
 def hello_world():
     contacts = Contact.query.all()
-    return "miaauauuu we have " + str(len(contacts)) + " in the db and the contact names are: " + contacts[0].name + "and " contacts[1].name
+    return "miaauauuu we have " + str(len(contacts)) + " in the db and the contact names are: " + contacts[0].name + "and " + contacts[1].name
