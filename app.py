@@ -42,6 +42,7 @@ def hello_world():
     # numOfDB = getNumberOfDBs()
     # print(numOfDB)
     contats = Contact.query.all()
-    return "First contact has a name "
+    numOfContacts = len(contacts)
+    return "I have " + str(numOfContacts) + "contacts"
     # return "Im using sqlalchemy 2" + "and having probs."
     # return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, I think it should have one....."
