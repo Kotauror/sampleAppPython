@@ -50,7 +50,7 @@ def hello_world():
     print(contacts)
     print("***")
     # numOfContacts = len(contacts)
-    return "miaauauuu we have " + str(len(contacts)) + "in the db"
+    return "miaauauuu we have " + str(len(contacts)) + " in the db and the contact name is " + contacts[0].name
     # return str(numOfContacts)
     # return "I have " + str(numOfContacts) + "contacts"
     # return "Im using sqlalchemy 2" + "and having probs."
