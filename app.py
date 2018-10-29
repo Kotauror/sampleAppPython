@@ -24,6 +24,7 @@ POSTGRES = {
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
 %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
+app.config[‘SQLALCHEMY_TRACK_MODIFICATIONS’] = False
 db.init_app(app)
 
 # app.config.from_object(SQLALCHEMY_DATABASE_URI)
@@ -43,7 +44,7 @@ def hello_world():
     # print(numOfDB)
     contats = Contact.query.all()
     numOfContacts = len(contacts)
-    return numOfContacts
+    return str(numOfContacts)
     # return "I have " + str(numOfContacts) + "contacts"
     # return "Im using sqlalchemy 2" + "and having probs."
     # return "Hi Mentors! My EC2 instance has: " + str(numOfDB) + " databases, I think it should have one....."
