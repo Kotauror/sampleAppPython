@@ -2,6 +2,11 @@
 <html>
    <body>
       <h1>We have {{ number_of_contacts }} contacts in the database!</h1>
+      <form action="/addContact" method="post">
+        Contact name:<br>
+        <input type="text" name="name" value=""><br>
+        <input type="submit" value="Submit">
+      </form>
       <ul>
       {% for contact in contacts %}
       <li> {{ contact.name }}
