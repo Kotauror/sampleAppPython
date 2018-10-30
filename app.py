@@ -16,5 +16,8 @@ def get_contacts():
 @app.route('/addContact', methods=["POST"])
 def add_contact():
     username = request.form['name']
-    contacts_book.add_contact(username)
-    return redirect('/')
+    try:
+        contacts_book.add_contact(username)
+        return redirect('/')
+    except Exception:
+        return redirect('/')
