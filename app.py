@@ -7,6 +7,8 @@ from flask_sqlalchemy import SQLAlchemy
 from contacts_book import ContactsBook
 
 app = Flask(__name__)
+contacts_book = ContactsBook()
+
 
 POSTGRES = {
     'user': 'helloNamesAdmin',
@@ -23,5 +25,5 @@ db.init_app(app)
 
 @app.route('/')
 def hello_world():
-    contacts = ContactsBook.get_contacts()
+    contacts = contacts_book.get_contacts()
     return "miaauauuu we have " + str(len(contacts)) + " in the db and the contact names are: " + contacts[0].name + "and " + contacts[1].name + "!"
