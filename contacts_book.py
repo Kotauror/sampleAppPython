@@ -1,4 +1,4 @@
-from models import Contact
+from contact import Contact
 
 class ContactsBook():
 
